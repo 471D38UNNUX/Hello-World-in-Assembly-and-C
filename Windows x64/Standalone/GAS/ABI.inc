@@ -5,6 +5,7 @@
 
 .section .text
     .global Hello
+
 Hello:
     sub $40, %rsp
 
