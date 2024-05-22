@@ -5,3 +5,4 @@
 
 main:
     call Hello
+    ret
