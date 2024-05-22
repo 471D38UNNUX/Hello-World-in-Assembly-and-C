@@ -5,7 +5,7 @@ ExitProcess PROTO
 WriteConsoleA PROTO
 
 .data
-msg BYTE "Hello World",0
+    msg BYTE "Hello World",0
 
 .code
 Hello PROC
