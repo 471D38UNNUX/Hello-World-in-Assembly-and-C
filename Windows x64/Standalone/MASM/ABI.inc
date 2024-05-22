@@ -20,8 +20,8 @@ Hello PROC
     mov qword ptr 32[rsp], 0
     call WriteConsoleA
 
+    add rsp, 40
+
     xor rcx, rcx
     call ExitProcess
-
-    add rsp, 40
 Hello ENDP
