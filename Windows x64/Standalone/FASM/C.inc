@@ -6,6 +6,8 @@ Hello:
 	lea rcx, [msg]
 	call [printf]
 
+	ret
+
 section '.idata' import data readable
 dd 0, 0, 0, RVA msvcrt, RVA msvcrt_table
 dd 0, 0, 0, 0, 0
