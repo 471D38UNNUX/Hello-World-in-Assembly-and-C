@@ -4,6 +4,7 @@
 
 .section .text
     .global Hello
+
 Hello:
     lea msg(%rip), %rcx
     call printf
