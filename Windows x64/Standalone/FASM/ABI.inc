@@ -14,10 +14,11 @@ Hello:
 	xor r9, r9
 	mov qword [rsp + 32], 0
 	call [WriteConsoleA]
+
+	add rsp, 40
 	
 	xor rcx, rcx
 	call [ExitProcess]
-	add rsp, 40
 
 section '.idata' import data readable
 dd 0, 0, 0, RVA kernel, RVA kernel_table
