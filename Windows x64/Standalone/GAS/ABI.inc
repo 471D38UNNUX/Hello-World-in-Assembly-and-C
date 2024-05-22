@@ -19,7 +19,8 @@ Hello:
     movq $0, 32(%rsp)
     call WriteConsoleA
 
+    add $40, %rsp
+
     xor %rcx, %rcx
     call ExitProcess
 
-    add $40, %rsp
