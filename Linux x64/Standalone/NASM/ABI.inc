@@ -7,7 +7,7 @@ section .data
     len equ $ - message - 1
 
 section .text
-    global World
+    global Hello
 
 Hello:
     mov rax, 1
