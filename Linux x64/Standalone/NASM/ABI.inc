@@ -3,7 +3,7 @@ section .note.GNU-stack
     db 0
 
 section .data
-    message db 'Hello World', 0
+    msg db 'Hello World', 0
     len equ $ - message - 1
 
 section .text
@@ -12,7 +12,7 @@ section .text
 Hello:
     mov rax, 1
     mov rdi, 1
-    lea rsi, message
+    lea rsi, msg
     lea rdx, len
     syscall
 
