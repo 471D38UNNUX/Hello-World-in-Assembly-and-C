@@ -9,7 +9,7 @@ section .data
 section .text
     global World
 
-World:
+Hello:
     mov rax, 1
     mov rdi, 1
     lea rsi, message
