@@ -4,6 +4,6 @@ section .text
     global _start
 
 _start:
-    call World
+    call Hello
 
     ret
