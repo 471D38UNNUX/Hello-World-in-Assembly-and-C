@@ -13,6 +13,6 @@ Hello:
     mov x8, 64
     svc 0
 
-    xor x0, x0
+    eor x0, x0, x0
     mov x8, 93
     svc 0
