@@ -1,4 +1,4 @@
-const char * Hello(char msg[], size_t len)
+void Hello(char msg[], size_t len)
 {
     asm volatile
     (
@@ -21,6 +21,4 @@ const char * Hello(char msg[], size_t len)
         : "r"(msg), "r"(len)
         : "%rax", "%rcx", "%rdx", "%r8", "%r9", "memory"
     );
-    
-    return 0;
 }
