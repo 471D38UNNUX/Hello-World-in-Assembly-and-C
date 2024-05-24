@@ -11,7 +11,7 @@ section .text
     global Hello
 
 Hello:
-    lea rdi, msg
+    lea rdi, [rel msg]
     call printf
 
     ret
