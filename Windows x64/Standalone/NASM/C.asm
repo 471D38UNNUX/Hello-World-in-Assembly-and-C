@@ -5,4 +5,5 @@ section .text
 
 main:
     call Hello
+
     ret
