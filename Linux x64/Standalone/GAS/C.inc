@@ -10,3 +10,5 @@
 Hello:
     lea msg(%rip), %rdi
     call printf
+
+    ret
