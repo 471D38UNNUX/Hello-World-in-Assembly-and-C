@@ -8,7 +8,7 @@
     .global Hello
 
 Hello:
-    lea msg, %rdi
+    lea msg(%rip), %rdi
     call printf
     
     ret
