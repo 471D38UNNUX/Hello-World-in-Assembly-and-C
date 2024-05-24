@@ -5,4 +5,5 @@
 
 _start:
     call Hello
+
     ret
