@@ -11,7 +11,7 @@
 Hello:
     mov $1, %rax
     mov $1, %rdi
-    lea msg, %rsi
+    lea msg(%rip), %rsi
     lea len, %rdx
     syscall
 
