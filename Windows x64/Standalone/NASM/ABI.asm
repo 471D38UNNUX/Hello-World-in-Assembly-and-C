@@ -5,4 +5,5 @@ section .text
 
 _start:
     call Hello
+
     ret
