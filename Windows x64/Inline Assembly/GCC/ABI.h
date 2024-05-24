@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 const char * Hello(char msg[], size_t len)
 {
     asm volatile
