@@ -12,7 +12,7 @@ section .text
 Hello:
     mov rax, 1
     mov rdi, 1
-    lea rsi, msg
+    lea rsi, [rel msg]
     lea rdx, len
     syscall
 
