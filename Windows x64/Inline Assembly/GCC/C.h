@@ -8,6 +8,6 @@ void Hello(char msg[])
         "ret\n"
         :
         : "r"(msg)
-        : "%rax", "%rcx"
+        : "%rcx"
     );
 }
