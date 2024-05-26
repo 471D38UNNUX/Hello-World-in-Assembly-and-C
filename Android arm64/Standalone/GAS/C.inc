@@ -9,4 +9,5 @@ Hello:
     adr x0, msg
     bl printf
 
-    ret
+    mov x0, 0
+    bl exit
