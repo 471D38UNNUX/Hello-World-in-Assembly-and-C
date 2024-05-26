@@ -1,9 +1,9 @@
 .include "C.inc"
 
 .section .text
-    .global _start
+    .global main
 
-_start:
+main:
     bl Hello
 
     ret
