@@ -1,9 +1,12 @@
 .include "ABI.inc"
 
-.section .text
-    .global _start
+.section	.text
+	.global _start # change into main if assembling/linking with gcc/clang
 
 _start:
-    call Hello
+	sub	$40, %spl
 
-    ret
+	call	Hello
+
+	xor	%rcx, %rcx
+	call	ExitProcess
