@@ -1,26 +1,24 @@
-.section .data
-    msg:
-        .asciz "Hello World"
-        len = . - msg - 1
+.extern GetStdHandle, WriteConsoleA, ExitProcess
 
-.section .text
-    .global Hello
+.section	.data
+msg:
+	.asciz "Hello World"
+	len = . - msg - 1
 
+.section	.text
 Hello:
-    sub $40, %rsp
+	sub	$40, %spl
 
-    mov $-11, %rcx
-    call GetStdHandle
+	mov	$-11, %rcx
+	call	GetStdHandle
 
-    mov %rax, %rcx
-    lea msg(%rip), %rdx
-    lea len, %r8
-    xor %r9, %r9
-    movq $0, 32(%rsp)
-    call WriteConsoleA
+	mov	%rax, %rcx
+	lea	msg(%rip), %rdx
+	lea	len, %r8
+	xor	%r9, %r9
+	movq	$0, 32(%rsp)
+	call	WriteConsoleA
 
-    add $40, %rsp
+	add	$40, %spl
 
-    xor %rcx, %rcx
-    call ExitProcess
-
+	ret
