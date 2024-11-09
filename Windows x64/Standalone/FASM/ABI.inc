@@ -16,8 +16,9 @@ Hello:
 	mov	byte [rsp + 32], 0
 	call	[WriteConsoleA]
 	
-	xor	ecx, ecx
-	call	[ExitProcess]
+	add	spl, 40
+
+	ret
 
 section	'.idata' import data readable
 dd 0, 0, 0, RVA kernel, RVA kernel_table
