@@ -3,8 +3,11 @@ entry main
 
 include 'ABI.inc'
 
-section '.text' code readable executable
+section    '.text' code readable executable
 main:
-    call Hello
+    sub    spl, 40
 
-    ret
+    call   Hello
+
+    xor    ecx, ecx
+    call   [ExitProcess]
