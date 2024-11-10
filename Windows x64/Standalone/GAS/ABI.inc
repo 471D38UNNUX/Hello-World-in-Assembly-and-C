@@ -15,8 +15,8 @@ Hello:
 	mov	%rax, %rcx
 	lea	msg(%rip), %rdx
 	lea	len, %r8
-	xor	%r9, %r9
-	movq	$0, 32(%rsp)
+	xor	%r9d, %r9d
+	movb	$0, 32(%rsp)
 	call	WriteConsoleA
 
 	add	$40, %spl
