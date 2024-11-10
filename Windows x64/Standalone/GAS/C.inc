@@ -1,12 +1,17 @@
-.section .data
-    msg:
-        .asciz "Hello World"
+.extern printf, exit
 
-.section .text
-    .global Hello
+.section	.data
+msg:
+	.asciz "Hello World"
 
+.section	.text
 Hello:
-    lea msg(%rip), %rcx
-    call printf
-    
-    ret
+	sub	$40, %spl
+
+	lea	msg(%rip), %rcx
+	call	printf
+
+	add	$40, %spl
+
+	ret
+
