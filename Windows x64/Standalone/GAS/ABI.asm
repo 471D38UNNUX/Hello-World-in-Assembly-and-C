@@ -8,5 +8,5 @@ _start:
 
 	call	Hello
 
-	xor	%rcx, %rcx
+	xor	%ecx, %ecx
 	call	ExitProcess
