@@ -3,7 +3,7 @@
 .section	.data
 msg:
 	.asciz "Hello World"
-	len = . - msg - 1
+	len = . - msg
 
 .section	.text
 Hello:
