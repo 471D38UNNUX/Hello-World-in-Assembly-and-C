@@ -1,9 +1,9 @@
 ; Remove this comment for assembling with command line
 ; includelib kernel32.lib 
 
-GetStdHandle PROTO
-ExitProcess PROTO
-WriteConsoleA PROTO
+GetStdHandle proto
+ExitProcess proto
+WriteConsoleA proto
 
 .data
     msg db "Hello World", 0
