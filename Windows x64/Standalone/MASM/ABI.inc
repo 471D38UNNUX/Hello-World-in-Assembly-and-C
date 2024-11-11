@@ -1,27 +1,27 @@
-includelib kernel32.lib
+; Remove this comment for assembling with command line
+; includelib kernel32.lib 
 
 GetStdHandle PROTO
 ExitProcess PROTO
 WriteConsoleA PROTO
 
 .data
-    msg BYTE "Hello World",0
+    msg db "Hello World", 0
 
 .code
-Hello PROC
-    sub rsp, 40
-    mov rcx, -11
-    call GetStdHandle
+Hello proc
+    sub     spl, 40
+    mov     ecx, -11
+    call    GetStdHandle
 
-    mov rcx, rax
-    lea rdx, msg
-    mov r8, LENGTHOF msg - 1
-    xor r9, r9
-    mov qword ptr 32[rsp], 0
-    call WriteConsoleA
+    mov     ecx, eax
+    lea     rdx, msg
+    mov     r8d, lengthof msg
+    xor     r9d, r9d
+    mov     byte ptr 32[rsp], 0
+    call    WriteConsoleA
 
-    add rsp, 40
+    add     spl, 40
 
-    xor rcx, rcx
-    call ExitProcess
-Hello ENDP
+    ret
+Hello endp
