@@ -9,10 +9,10 @@ msg:
 Hello:
 	sub	$40, %spl
 
-	mov	$-11, %rcx
+	mov	$-11, %ecx
 	call	GetStdHandle
 
-	mov	%rax, %rcx
+	mov	%eax, %ecx
 	lea	msg(%rip), %rdx
 	lea	len, %r8
 	xor	%r9d, %r9d
