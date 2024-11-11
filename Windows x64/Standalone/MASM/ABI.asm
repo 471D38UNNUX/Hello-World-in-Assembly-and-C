@@ -1,10 +1,12 @@
 include ABI.inc
 
 .code
-main PROC
-    call Hello
+mainCRTStartup proc
+    sub     spl, 40
 
-    ret
-main ENDP
+    call    Hello
 
-END
+    xor     ecx, ecx
+    call    ExitProcess
+mainCRTStartup endp
+end
