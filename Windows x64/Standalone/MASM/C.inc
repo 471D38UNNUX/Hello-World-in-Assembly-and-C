@@ -1,14 +1,21 @@
-includelib libcmt.lib
+; Remove this comment for assembling with command line
+; includelib legacy_stdio_definitions.lib
+; includelib ucrt.lib
 
-printf PROTO
+printf proto
+exit proto
 
 .data
-    msg BYTE "Hello World",0
+    msg db "Hello World", 0
 
 .code
 Hello PROC
-    lea rcx, msg
-    call printf
+    sub     spl, 40
 
+    lea     rcx, msg
+    call    printf
+
+    add     spl, 40
+    
     ret
 Hello ENDP
