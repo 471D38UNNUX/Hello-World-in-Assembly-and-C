@@ -1,10 +1,12 @@
 include C.inc
 
 .code
-main PROC
-    call Hello
+mainCRTStartup proc
+    sub     spl, 40
 
-    ret
-main ENDP
+    call    Hello
 
-END
+    xor     ecx, ecx
+    call    exit
+mainCRTStartup endp
+end
