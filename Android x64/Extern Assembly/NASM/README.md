@@ -5,4 +5,4 @@ How to build:
 - nasm -f elf64 ABI.asm/C.asm namefile.o
 - gcc/clang ABI.c/C.c namefile.o -o namefile
 
-Nb: GCC is available in tur-repo. GNU Assembler is part of binutils which dependency of GCC
+Nb: GCC is available in tur-repo
