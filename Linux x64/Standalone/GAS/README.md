@@ -18,3 +18,5 @@ How to build:
          ld namefile.o -o namefile --dynamic-linker=/lib64/ld-linux-x86-64.so.2 -lc for C.asm only
       B. With GCC/Clang:
          gcc/clang namefile.o -o namefile
+     
+NB: GNU Assembler and GNU Linker are part of binutils which dependency of GCC
