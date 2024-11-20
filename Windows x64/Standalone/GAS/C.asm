@@ -1,12 +1,12 @@
 .include "C.inc"
 
-.section	.text
-	.global main # change into main if assembling/linking with gcc/clang
+.global _start # change into main if assembling/linking with gcc/clang or mainCRTStartup if assembling/linking with MSVC compiler/linker
 
-main:
-	sub	$40, %spl
+.section	.text
+_start:
+	sub		$40, %spl
 
 	call	Hello
 
-	xor	%ecx, %ecx
+	xor		%ecx, %ecx
 	call	exit

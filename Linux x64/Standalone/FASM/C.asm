@@ -1,12 +1,14 @@
-format ELF64
+format elf64 executable 3
 
-public main
+entry start
 
 include 'C.inc'
 
-section '.code' executable
+segment readable executable
+start:
+  call  Hello
 
-main:
-    call Hello
-    
-    ret
+  xor   edi, edi
+  call  [exit]
+
+  ret

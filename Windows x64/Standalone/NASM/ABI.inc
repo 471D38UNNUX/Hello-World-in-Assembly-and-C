@@ -1,28 +1,23 @@
-extern GetStdHandle
-extern ExitProcess
-extern WriteConsoleA
+extern GetStdHandle, WriteConsoleA, ExitProcess
 
 section .data
-    msg db 'Hello World', 0
-    len equ $ - msg - 1
+    msg db 'Hello, World!', 0
+    len equ $ - msg
 
 section .text
-    global Hello
-
 Hello:
-    sub rsp, 40
+    sub     spl, 40
 
-    mov rcx, -11
-    call GetStdHandle
+    mov     ecx, -11
+    call    GetStdHandle
 
-    mov rcx, rax
-    lea rdx, msg
-    lea r8, len
-    xor r9, r9
-    mov qword 32[rsp], 0
-    call WriteConsoleA
+    mov     ecx, eax
+    lea     rdx, [rel msg]
+    mov     r8d, len
+    xor     r9d, r9d
+    mov     byte 32[rsp], 0
+    call    WriteConsoleA
 
-    add rsp, 40
+    add     spl, 40
 
-    xor rcx, rcx
-    call ExitProcess
+    ret

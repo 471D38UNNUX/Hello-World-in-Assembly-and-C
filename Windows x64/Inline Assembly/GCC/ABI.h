@@ -1,24 +1,20 @@
-void Hello(char msg[], size_t len)
+#include <Windows.h>
+
+extern inline void Hello(char * msg, int len)
 {
-    asm volatile
+    __asm__ volatile
     (
-        "sub $40, %%rsp\n"
-        
-        "mov $-11, %%rcx\n"
-        "call GetStdHandle\n"
-        "mov %%rax, %%rcx\n"
-        "mov %0, %%rdx\n"
-        "mov %1, %%r8\n"
-        "xor %%r9, %%r9\n"
-        "movq $0, 32(%%rsp)\n"
-        "call WriteConsoleA\n"
+        "mov    $-11, %%ecx\n"
+        "call   GetStdHandle\n"
 
-        "add $40, %%rsp\n"
-
-        "xor %%rcx, %%rcx\n"
-        "call ExitProcess\n"
+        "mov    %%eax, %%ecx\n"
+        "mov    %0, %%rdx\n"
+        "mov    %1, %%r8d\n"
+        "xor    %%r9d, %%r9d\n"
+        "movb   $0, 32(%%rsp)\n"
+        "call   WriteConsoleA\n"
         :
         : "r"(msg), "r"(len)
-        : "%rax", "%rcx", "%rdx", "%r8", "%r9", "memory"
+        : "%rax", "%rcx", "%rdx", "%r8", "%r9"
     );
-}
+};

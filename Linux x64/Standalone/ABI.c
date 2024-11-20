@@ -1,8 +1,9 @@
 #include <unistd.h>
+#include <sys/syscall.h>
 
 int main()
 {
-    write(STDOUT_FILENO, "Hello World", sizeof("Hello World") - 1);
+    syscall(SYS_write, STDOUT_FILENO, "Hello, World!", sizeof("Hello, World!"));
 
-    return 0;
+    syscall(SYS_exit, 0);
 }

@@ -1,11 +1,11 @@
-void Hello(char msg[])
+#include <stdlib.h>
+
+extern inline void Hello(char * msg)
 {
-    asm volatile
+    __asm__ volatile
     (
-        "mov %0, %%rcx\n"
-        "call printf\n"
-        
-        "ret\n"
+        "mov    %0, %%rcx\n"
+        "call   printf\n"
         :
         : "r"(msg)
         : "%rcx"

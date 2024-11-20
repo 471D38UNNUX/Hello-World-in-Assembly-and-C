@@ -1,13 +1,14 @@
-format PE64 CONSOLE
+format pe64 console
+
 entry main
 
 include 'C.inc'
 
-section    '.text' code readable executable
+section '.text' code readable executable
 main:
-    sub    spl, 40
+    sub     spl, 40
 
-    call   Hello
+    call    Hello
 
-    xor    ecx, ecx
-    call   [exit]
+    xor     ecx, ecx
+    call    [exit]

@@ -1,16 +1,17 @@
 ; Remove this comment for assembling with command line
-; includelib kernel32.lib 
+includelib kernel32.lib 
 
 GetStdHandle proto
 ExitProcess proto
 WriteConsoleA proto
 
 .data
-    msg db "Hello World", 0
+    msg db "Hello, World!", 0
 
 .code
 Hello proc
     sub     spl, 40
+    
     mov     ecx, -11
     call    GetStdHandle
 

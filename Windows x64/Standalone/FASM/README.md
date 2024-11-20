@@ -1,4 +1,5 @@
 How to build:
--  Open cmd
--  cd this path
--  fasm ABI.asm/C.asm name.exe
+- Open cmd
+- git clone this repo
+- cd this path
+- fasm ABI.asm/C.asm namefile.exe

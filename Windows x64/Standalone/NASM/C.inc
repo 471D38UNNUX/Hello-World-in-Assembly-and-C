@@ -1,13 +1,15 @@
-extern printf
+extern printf, exit
 
 section .data
-    msg db 'Hello World', 0
+    msg db 'Hello, World!', 0
 
 section .text
-    global Hello
-
 Hello:
-    lea rcx, msg
-    call printf
+    sub     spl, 40
+    
+    lea     rcx, [rel msg]
+    call    printf
+
+    add     spl, 40
 
     ret

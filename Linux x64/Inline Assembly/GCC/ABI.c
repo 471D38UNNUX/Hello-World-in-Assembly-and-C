@@ -2,7 +2,7 @@
 
 int main()
 {
-    Hello("Hello World", sizeof("Hello World") - 1);
+    Hello("Hello, World!", sizeof("Hello, World!"));
     
-    return 0;
+    syscall(SYS_exit, 0);
 }

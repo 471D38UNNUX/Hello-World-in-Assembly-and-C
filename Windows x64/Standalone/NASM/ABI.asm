@@ -1,9 +1,13 @@
 %include "ABI.inc"
 
+global _start ; change into main if assembling/linking with gcc/clang or mainCRTStartup if assembling/linking with MSVC compiler/linker
+
 section .text
-    global _start
 
 _start:
-    call Hello
+    sub     spl, 40
+    
+    call    Hello
 
-    ret
+    xor     ecx, ecx
+    call    ExitProcess

@@ -1,9 +1,13 @@
 %include "C.inc"
 
+global _start ; change into main if assembling/linking with gcc/clang or mainCRTStartup if assembling/linking with MSVC compiler/linker
+
 section .text
-    global main
 
-main:
-    call Hello
+_start:
+    sub     spl, 40
 
-    ret
+    call    Hello
+
+    xor     ecx, ecx
+    call    exit

@@ -1,18 +1,13 @@
 segment readable writable
-
-msg db 'Hello World', 0
-len = $ - msg
+    msg db 'Hello, World!', 0
+    len = $ - msg
 
 segment readable executable
 Hello:
-    mov rax, 1
-    mov rdi, 1
+    mov al, 1
+    mov dil, 1
     lea rsi, [msg]
-    lea rdx, [len]
+    mov dl, len
     syscall
 
-    mov rax, 60
-
-    xor rdi, rdi
-
-    syscall
+    ret

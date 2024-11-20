@@ -2,7 +2,7 @@
 
 int main()
 {
-    WriteConsoleA(GetStdHandle(STD_OUTPUT_HANDLE), "Hello World", sizeof("Hello World") - 1, NULL, NULL);
+    WriteConsoleA(GetStdHandle(STD_OUTPUT_HANDLE), "Hello, World!", sizeof("Hello World") - 1, NULL, NULL);
 
     ExitProcess(0);
 }
