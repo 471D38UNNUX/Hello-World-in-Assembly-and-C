@@ -26,4 +26,4 @@ How to build:
          * cd this path
          * cl namefile.obj /link /subsystem:console /out:namefile.exe kernel32.lib for ABI.asm legacy_stdio_definitions.lib ucrt.lib for C.asm
 
-Nb: GCC is available in MinGW-w64 and Clang is available in LLVM and MinGW-w64. GNU Assembler is part of binutils which dependency of GCC
+Nb: GCC is available in MinGW-w64 and Clang is available in LLVM and MinGW-w64. GNU Assembler and GNU Linker are part of binutils which dependency of GCC
