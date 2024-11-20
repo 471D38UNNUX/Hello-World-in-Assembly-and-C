@@ -19,4 +19,4 @@ How to build:
       B. With GCC/Clang:
          gcc/clang namefile.o -o namefile
 
-Nb: GCC is available in tur-repo. GNU Assembler is part of binutils which dependency of GCC
+Nb: GCC is available in tur-repo. GNU Assembler and GNU Linker are part of binutils which dependency of GCC
