@@ -11,4 +11,4 @@ How to build:
    - as ABI.asm/C.asm -o namefile.o
    - gcc/clang ABI.c/C.c namefile.o -o namefile
 
-Nb: GCC is available in tur-repo. GNU Linker is part of binutils which dependency of GCC
+Nb: GCC is available in tur-repo. GNU Assembler is part of binutils which dependency of GCC
