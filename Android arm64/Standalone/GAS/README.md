@@ -18,3 +18,5 @@ How to build:
          ld -pie namefile.o -o namefile --dynamic-linker=/system/bin/linker64 -lc for C.asm only
       B. With GCC/Clang:
          gcc/clang namefile.o -o namefile
+
+Nb: GCC is available in tur-repo. GNU Assembler and GNU Linker are part of binutils which dependency of GCC
