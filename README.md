@@ -24,3 +24,5 @@ Run Hello World program in C and various assembler platform
 -  x64 Windows GNU Assembler
 -  x64 Windows MASM Visual Studio
 -  x64 Windows NASM
+
+Nb:  for x64 Windows Clang and arm64 Windows Clang, you need MinGW-w64's Clang instead of LLVM's Clang if you want targeting for Wine
