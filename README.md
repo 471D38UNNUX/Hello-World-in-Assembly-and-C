@@ -4,7 +4,7 @@
 Run Hello World program in C and various assembler platform
 
 ## List Assembler Platform
-----------------
+--------------------------
 
 -  arm64 Android Clang Termux
 -  arm64 Android GNU Assembler Termux
