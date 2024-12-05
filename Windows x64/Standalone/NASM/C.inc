@@ -1,7 +1,7 @@
 extern printf, exit
 
 section .data
-    msg db 'Hello, World!', 0
+    msg db 'Hello, World!', 10, 0
 
 section .text
 Hello:

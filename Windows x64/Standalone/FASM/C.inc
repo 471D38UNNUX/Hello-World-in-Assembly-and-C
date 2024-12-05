@@ -1,5 +1,5 @@
 section	'.data' data readable writable
-	msg	db "Hello, World!", 0
+	msg	db "Hello, World!", 10, 0
 
 section	'.text' code readable executable
 Hello:

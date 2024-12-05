@@ -1,6 +1,6 @@
 .section	.data
 msg:
-	.asciz "Hello, World!"
+	.asciz "Hello, World!\n"
 
 .section	.text
 Hello:
