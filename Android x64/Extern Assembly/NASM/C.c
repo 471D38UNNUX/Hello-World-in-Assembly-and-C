@@ -2,7 +2,7 @@
 
 extern void Hello(char * msg);
 
-int main()
+int         main()
 {
     Hello("Hello, World!\n");
     

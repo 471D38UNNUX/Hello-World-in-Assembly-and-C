@@ -4,11 +4,10 @@
 
 .section    .text
 Hello:
-    stp     fp, lr, [sp, - 16]!
-    mov     fp, sp
+    str lr, [sp, - 16]!
 
-    bl      printf
+    bl  printf
     
-    ldp     fp, lr, [sp], 16
+    ldr lr, [sp], 16
 
     ret

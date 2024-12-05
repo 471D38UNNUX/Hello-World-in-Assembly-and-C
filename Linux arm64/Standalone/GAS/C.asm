@@ -5,10 +5,9 @@
 .section    .text
 _start:
     // remove this comment if assembling/linking with gcc/clang
-    // stp     fp, lr, [sp, - 16]!
-    // mov     fp, sp
+    // str lr, [sp, - 16]!
 
-    bl Hello
+    bl  Hello
 
-    eor     w0, w0, w0
-    bl      exit
+    mov w0, wzr
+    bl  exit

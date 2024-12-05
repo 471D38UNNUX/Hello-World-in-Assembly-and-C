@@ -6,7 +6,7 @@ extrn ExitProcess
 extrn Hello
 
 section	'.data' data readable writable
-	msg	db "Hello, World!", 0
+	msg	db "Hello, World!"
 	len	= $ - msg
 
 section '.text' code readable executable

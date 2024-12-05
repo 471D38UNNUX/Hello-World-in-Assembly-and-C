@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void Hello(char * msg)
+void    Hello(char * msg)
 {
     printf("%s", msg);
 }

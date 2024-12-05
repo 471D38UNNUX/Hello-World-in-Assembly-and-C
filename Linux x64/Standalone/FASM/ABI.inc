@@ -4,10 +4,10 @@ segment readable writable
 
 segment readable executable
 Hello:
-    mov al, 1
-    mov dil, 1
-    lea rsi, [msg]
-    mov dl, len
+    mov     al, 1
+    mov     dil, 1
+    lea     rsi, [msg]
+    mov     dl, len
     syscall
 
     ret

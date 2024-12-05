@@ -1,7 +1,7 @@
 extern GetStdHandle, WriteConsoleA, ExitProcess
 
 section .data
-    msg db 'Hello, World!', 0
+    msg db 'Hello, World!'
     len equ $ - msg
 
 section .text

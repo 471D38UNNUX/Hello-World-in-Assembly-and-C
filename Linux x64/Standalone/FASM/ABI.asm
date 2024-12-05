@@ -6,8 +6,8 @@ include 'ABI.inc'
 
 segment readable executable
 main:
-    call Hello
+    call    Hello
 
-    mov al, 60
-    xor dil, dil
+    mov     al, 60
+    xor     dil, dil
     syscall

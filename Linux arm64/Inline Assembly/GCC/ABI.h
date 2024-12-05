@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include <sys/syscall.h>
 
-extern inline void Hello(char * msg, long long len)
+extern inline void  Hello(char * msg, long long len)
 {
     asm volatile
     (

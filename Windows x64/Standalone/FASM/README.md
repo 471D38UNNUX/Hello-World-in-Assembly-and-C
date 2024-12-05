@@ -1,4 +1,6 @@
-How to build:
+### How to build
+----------------
+
 - Open cmd
 - git clone this repo
 - cd this path

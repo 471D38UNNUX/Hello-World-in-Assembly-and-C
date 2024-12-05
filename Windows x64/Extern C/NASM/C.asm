@@ -3,7 +3,7 @@ extern exit, Hello
 global main
 
 section .data
-    msg db 'Hello, World!', 0
+    msg db 'Hello, World!', 10, 0
 
 section .text
 main:

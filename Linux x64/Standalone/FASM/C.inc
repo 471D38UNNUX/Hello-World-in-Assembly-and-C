@@ -62,7 +62,7 @@ define needed@dynamic
 
 macro import [name]
 {
- common
+  common
   local strtab,strsz,symtab,rel,relsz,hash
   segment dynamic readable
   match needed,needed@dynamic
@@ -78,41 +78,41 @@ macro import [name]
   dq DT_NULL,0
   segment readable writeable
   symtab: Elf64_Sym
- forward
+  forward
   local fstr
   Elf64_Sym fstr-strtab,0,0,STB_GLOBAL,STT_FUNC,0,0
- common
+  common
   rela:
-  local counter
-  counter = 1
- forward
-   Elf64_Rela name,counter,R_X86_64_64
-   counter = counter+1
- common
+    local counter
+    counter = 1
+  forward
+  Elf64_Rela name,counter,R_X86_64_64
+  counter = counter+1
+  common
   relasz = $-rela
   hash:
-  dd 1,counter
-  dd 0
-  repeat counter
-   if %=counter
+    dd 1,counter
     dd 0
-   else
+    repeat counter
+    if %=counter
+    dd 0
+    else
     dd %
-   end if
-  end repeat
-  strtab db 0
- forward
+    end if
+    end repeat
+    strtab db 0
+  forward
   fstr db `name,0
- common
+  common
   match needed,needed@dynamic
   \{ irp item,needed \\{ match str:library,item \\\{ str db library,0 \\\} \\} \}
   strsz = $-strtab
- forward
+  forward
   name dq 0
 }
 
 segment interpreter readable
-    db '/lib64/ld-linux-x86-64.so.2',0
+  db '/lib64/ld-linux-x86-64.so.2',0
 
 needed 'libc.so.6'
 import printf, exit

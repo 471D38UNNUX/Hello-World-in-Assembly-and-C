@@ -2,7 +2,7 @@
 
 .section	.data
 msg:
-	.asciz "Hello, World!"
+	.ascii "Hello, World!"
 .equ len, . - msg
 
 .section	.text

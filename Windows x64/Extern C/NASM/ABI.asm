@@ -3,7 +3,7 @@ extern ExitProcess, Hello
 global main
 
 section .data
-    msg db 'Hello, World!', 0
+    msg db 'Hello, World!'
     len equ $ - msg
 
 section .text

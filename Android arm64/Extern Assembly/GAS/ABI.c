@@ -3,7 +3,7 @@
 
 extern void Hello(char * msg, int len);
 
-int main()
+int         main()
 {
     Hello("Hello, World!", sizeof("Hello, World!"));
     

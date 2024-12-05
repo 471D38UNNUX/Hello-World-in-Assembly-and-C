@@ -4,8 +4,8 @@
 
 .section    .text
 _start:
-    bl Hello
+    bl  Hello
 
-    mov     w8, 93
-    eor     w0, w0, w0
-    svc     0
+    mov w8, 93
+    mov w0, wzr
+    svc 0

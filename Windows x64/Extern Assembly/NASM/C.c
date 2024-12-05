@@ -4,7 +4,7 @@ extern void Hello(char * msg);
 
 int main()
 {
-    Hello("Hello, World!");
+    Hello("Hello, World!\n");
     
     exit(0);
 }

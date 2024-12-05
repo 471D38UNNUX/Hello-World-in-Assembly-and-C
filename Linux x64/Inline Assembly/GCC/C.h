@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-extern inline void Hello(char * msg)
+extern inline void  Hello(char * msg)
 {
     asm volatile
     (
