@@ -4,7 +4,7 @@ section	'.data' data readable writable
 
 section '.text' code readable executable
 Hello:
-	sub		spl, 40
+	sub		rsp, 40
 
 	mov		ecx, -11
 	call	[GetStdHandle]
@@ -16,7 +16,7 @@ Hello:
 	mov		byte [rsp + 32], 0
 	call	[WriteConsoleA]
 	
-	add		spl, 40
+	add		rsp, 40
 
 	ret
 

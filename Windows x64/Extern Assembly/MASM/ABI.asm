@@ -3,7 +3,7 @@ WriteConsoleA proto
 
 .code
 Hello proc
-    sub     spl, 40
+    sub     rsp, 40
 
     mov     rbx, rcx
     mov     ebp, edx
@@ -17,7 +17,7 @@ Hello proc
     mov     byte ptr 32[rsp], 0
     call    WriteConsoleA
 
-    add     spl, 40
+    add     rsp, 40
 
     ret
 Hello endp

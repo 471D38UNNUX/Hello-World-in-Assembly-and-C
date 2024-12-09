@@ -5,7 +5,7 @@ msg:
 
 .section	.text
 Hello:
-	sub		$40, %spl
+	sub		$40, %rsp
 
 	mov		$-11, %ecx
 	call	GetStdHandle
@@ -17,6 +17,6 @@ Hello:
 	movb	$0, 32(%rsp)
 	call	WriteConsoleA
 
-	add		$40, %spl
+	add		$40, %rsp
 
 	ret

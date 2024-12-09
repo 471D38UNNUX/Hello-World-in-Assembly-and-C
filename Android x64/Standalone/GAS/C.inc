@@ -6,11 +6,11 @@ msg:
 
 .section    .text
 Hello:
-    sub     $8, %spl
+    sub     $8, %rsp
 
     lea     msg(%rip), %rdi
     call    printf
 
-    add     $8, %spl
+    add     $8, %rsp
 
     ret

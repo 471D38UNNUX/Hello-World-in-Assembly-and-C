@@ -7,7 +7,7 @@ extrn WriteConsoleA
 
 section '.text' code readable executable
 Hello:
-	sub		spl, 40
+	sub		rsp, 40
 
     mov     rbx, rcx
     mov     ebp, edx
@@ -21,6 +21,6 @@ Hello:
 	mov		byte [rsp + 32], 0
 	call	WriteConsoleA
 	
-	add		spl, 40
+	add		rsp, 40
 
 	ret

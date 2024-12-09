@@ -11,7 +11,7 @@ section	'.data' data readable writable
 
 section '.text' code readable executable
 main:
-	sub		spl, 40
+	sub		rsp, 40
 
     lea		rcx, [msg]
     mov     dl, len

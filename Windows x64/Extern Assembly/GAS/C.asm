@@ -2,10 +2,10 @@
 
 .section	.text
 Hello:
-	sub		$40, %spl
+	sub		$40, %rsp
 
 	call	printf
 
-	add		$40, %spl
+	add		$40, %rsp
 
 	ret

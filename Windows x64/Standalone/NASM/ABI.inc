@@ -6,7 +6,7 @@ section .data
 
 section .text
 Hello:
-    sub     spl, 40
+    sub     rsp, 40
 
     mov     ecx, -11
     call    GetStdHandle
@@ -18,6 +18,6 @@ Hello:
     mov     byte 32[rsp], 0
     call    WriteConsoleA
 
-    add     spl, 40
+    add     rsp, 40
 
     ret

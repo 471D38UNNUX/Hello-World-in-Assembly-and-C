@@ -5,7 +5,7 @@
 .section    .text
 _start:
     # remove this comment if assembling/linking with gcc/clang
-    # sub     $8, %spl
+    # sub     $8, %rsp
 
     call    Hello
 

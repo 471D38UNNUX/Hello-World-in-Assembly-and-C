@@ -3,12 +3,12 @@ section	'.data' data readable writable
 
 section	'.text' code readable executable
 Hello:
-	sub		spl, 40
+	sub		rsp, 40
 
 	lea		rcx, [msg]
 	call	[printf]
 	
-	add		spl, 40
+	add		rsp, 40
 
 	ret
 

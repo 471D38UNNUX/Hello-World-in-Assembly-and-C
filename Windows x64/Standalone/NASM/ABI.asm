@@ -5,7 +5,7 @@ global _start ; change into main if assembling/linking with gcc/clang or mainCRT
 section .text
 
 _start:
-    sub     spl, 40
+    sub     rsp, 40
     
     call    Hello
 

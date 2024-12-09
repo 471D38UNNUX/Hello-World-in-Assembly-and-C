@@ -4,10 +4,10 @@ global Hello
 
 section .text
 Hello:
-    sub     spl, 40
+    sub     rsp, 40
 
     call    printf
 
-    add     spl, 40
+    add     rsp, 40
 
     ret

@@ -2,7 +2,7 @@ include C.inc
 
 .code
 mainCRTStartup proc
-    sub     spl, 40
+    sub     rsp, 40
 
     call    Hello
 

@@ -5,11 +5,11 @@ section .data
 
 section .text
 Hello:
-    sub     spl, 40
+    sub     rsp, 40
     
     lea     rcx, [rel msg]
     call    printf
 
-    add     spl, 40
+    add     rsp, 40
 
     ret

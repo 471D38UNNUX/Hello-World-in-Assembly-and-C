@@ -6,10 +6,10 @@ section .note.GNU-stack
 
 section .text
 Hello:
-    sub		spl, 8
+    sub		rsp, 8
 
 	call	[rel printf wrt ..got]
 
-	add		spl, 8
+	add		rsp, 8
 
     ret

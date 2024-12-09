@@ -4,7 +4,7 @@
 
 .section	.text
 _start:
-	sub		$40, %spl
+	sub		$40, %rsp
 
 	call	Hello
 

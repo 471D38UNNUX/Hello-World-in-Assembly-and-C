@@ -10,12 +10,12 @@ exit proto
 
 .code
 Hello PROC
-    sub     spl, 40
+    sub     rsp, 40
 
     lea     rcx, msg
     call    printf
 
-    add     spl, 40
+    add     rsp, 40
     
     ret
 Hello ENDP

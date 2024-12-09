@@ -4,7 +4,7 @@ global Hello
 
 section .text
 Hello:
-    sub     spl, 40
+    sub     rsp, 40
 
     mov     rbx, rcx
     mov     ebp, edx
@@ -18,6 +18,6 @@ Hello:
     mov     byte 32[rsp], 0
     call    WriteConsoleA
 
-    add     spl, 40
+    add     rsp, 40
 
     ret

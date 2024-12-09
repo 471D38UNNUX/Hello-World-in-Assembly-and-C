@@ -11,10 +11,10 @@ section '.data' writable
 
 section	'.code' executable
 Hello:
-    sub		spl, 8
+    sub		rsp, 8
 
 	call	[_printf]
 
-	add		spl, 8
+	add		rsp, 8
 
     ret

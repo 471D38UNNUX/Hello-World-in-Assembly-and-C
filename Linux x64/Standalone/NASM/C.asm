@@ -5,7 +5,7 @@ global _start ; change into main if assembling/linking with gcc/clang
 section .text
 _start:
     ; remove this comment if assembling/linking with gcc/clang
-    ; sub     spl, 8
+    ; sub     rsp, 8
 
     call    Hello
     

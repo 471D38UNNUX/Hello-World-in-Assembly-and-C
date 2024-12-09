@@ -16,12 +16,12 @@ segment readable writeable
 
 segment readable executable
 Hello:
-    sub     spl, 8
+    sub     rsp, 8
 
     lea     rdi,[msg]
     call    [printf]
 
-    add     spl, 8
+    add     rsp, 8
 
     ret
 
