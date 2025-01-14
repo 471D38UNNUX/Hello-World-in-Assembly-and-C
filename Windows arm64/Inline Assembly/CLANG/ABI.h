@@ -4,7 +4,7 @@ extern inline void  Hello(char * msg, long long len)
 {
     __asm__ volatile
     (
-        "str    lr, [sp, - 16]!\n"
+        "str    lr, [sp, -16]!\n"
         
         "mov    w0, -11\n"
         "bl     GetStdHandle\n"

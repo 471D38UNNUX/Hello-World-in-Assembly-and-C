@@ -4,7 +4,7 @@
 
 .section	.text	
 main:
-    str	lr, [sp, - 16]!
+    str	lr, [sp, -16]!
 
 	bl	Hello
 

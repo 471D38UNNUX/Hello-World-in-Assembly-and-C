@@ -7,7 +7,7 @@ len equ :len: "Hello, World!"
 
 	area .text, code
 Hello	proc
-    str     lr, [sp, - 16]!
+    str     lr, [sp, -16]!
 
 	mov		w0, -11
 	bl		GetStdHandle

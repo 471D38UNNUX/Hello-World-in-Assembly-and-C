@@ -7,7 +7,7 @@ msg:
 
 .section	.text	
 main:
-    str		lr, [sp, - 16]!
+    str		lr, [sp, -16]!
 
     adrp	x0, msg
     add 	x0, x0, : lo12 : msg

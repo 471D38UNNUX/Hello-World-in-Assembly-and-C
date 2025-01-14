@@ -5,7 +5,7 @@ msg:
 
 .section	.text
 Hello:
-    str     lr, [sp, - 16]!
+    str     lr, [sp, -16]!
 	
 	mov		w0, -11
 	bl		GetStdHandle

@@ -5,7 +5,7 @@
 
 	area .text, code
 Hello	proc
-    str     lr, [sp, - 16]!
+    str     lr, [sp, -16]!
 	
 	mov		x9, x0
     mov 	w10, w1
